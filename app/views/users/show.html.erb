@@ -1,0 +1,12 @@
+<h1>Users#show</h1>
+
+<p><span>email: </span><%= @user.email %></p>
+
+<% @tweets.each do |tweet|%>
+<p><span>tweets: </span><%= link_to tweet.body,tweet_path(tweet.id) %></p>
+<% end %>
+
+<% @favorite_tweets.each do |tweet| %>
+  <hr>
+  <p><span>ファボツイート内容: </span><%=link_to tweet.body, tweet_path(tweet.id) %></p>
+<% end %>
