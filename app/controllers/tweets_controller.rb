@@ -21,6 +21,8 @@ class TweetsController < ApplicationController
         @tweet = Tweet.find(params[:id])
         @user = @tweet.user
         @favorites = @tweet.favorites
+        @comment = current_user.comments.build
+        @comments = @tweet.comments 
     end
 
     private
