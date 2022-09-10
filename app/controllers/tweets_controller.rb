@@ -22,7 +22,7 @@ class TweetsController < ApplicationController
         @user = @tweet.user
         @favorites = @tweet.favorites
         @comment = current_user.comments.build
-        @comments = @tweet.comments 
+        @comments = @tweet.comments
     end
 
     private
